@@ -4,14 +4,14 @@ from glob import glob
 
 import numpy as np
 import tensorflow as tf
-from imageio import imread
+from imageio import imread, imwrite
 from tqdm import tqdm
 
 from image_segmentation import build_data
 
 def image_array_to_bytes(array):
     byte_buffer = io.BytesIO()
-    array.save(byte_buffer, format="png")
+    imwrite(byte_buffer, array, "png")
     byte_buffer.seek(0)
     return byte_buffer.read()
 
