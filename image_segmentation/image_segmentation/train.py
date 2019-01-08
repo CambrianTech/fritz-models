@@ -347,6 +347,9 @@ def train(argv):
             mode='auto',
             period=1
         ),
+        keras.callbacks.TensorBoard(
+            write_images=True
+        )
     ]
 
     if args.gcs_bucket:
