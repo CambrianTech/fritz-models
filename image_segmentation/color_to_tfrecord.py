@@ -23,8 +23,8 @@ def get_segmentation_indices(path):
 
 def main():
     width, height = 512, 512
-    color_paths = glob("/home/joel/datasets/ade_mrpt/*_C.png")
-    seg_paths = glob("/home/joel/datasets/ade_mrpt/*_S.png")
+    color_paths = sorted(glob("/home/joel/datasets/ade_mrpt/*_C.png"))
+    seg_paths = sorted(glob("/home/joel/datasets/ade_mrpt/*_S.png"))
 
     assert len(color_paths) == len(seg_paths)
 
